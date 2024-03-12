@@ -1,4 +1,4 @@
-package com.danielfreitassc.aula_1.exercicioA;
+package com.danielfreitassc.aula_1.exercicio01;
 
 import java.net.URI;
 

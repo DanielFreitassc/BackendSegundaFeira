@@ -1,44 +1,46 @@
-package com.danielfreitassc.aula_1.exercicioB;
+package com.danielfeitassc.exercicio02.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.danielfeitassc.exercicio02.services.JogadorService;
+
 @RestController
-@RequestMapping("/jogador")
+@RequestMapping("jogador")
 public class JogadorController {
 
     @Autowired
-    private JogadorGerador jogadorGerador;
+    private JogadorService jogadorService;
 
     @GetMapping("/nome")
     public String getNome() {
-        return jogadorGerador.generateJogador().getNome();
+        return jogadorService.generateJogador().getNome();
     }
 
     @GetMapping("/sobrenome")
     public String getSobrenome() {
-        return jogadorGerador.generateJogador().getSobrenome();
+        return jogadorService.generateJogador().getSobrenome();
     }
 
     @GetMapping("/posicao")
     public String getPosicao() {
-        return jogadorGerador.generateJogador().getPosicao();
+        return jogadorService.generateJogador().getPosicao();
     }
 
     @GetMapping("/idade")
     public int getIdade() {
-        return jogadorGerador.generateJogador().getIdade();
+        return jogadorService.generateJogador().getIdade();
     }
 
     @GetMapping("/clube")
     public String getClube() {
-        return jogadorGerador.generateJogador().getClube();
+        return jogadorService.generateJogador().getClube();
     }
 
     @GetMapping("/descricao")
     public String getDescricao() {
-        return jogadorGerador.generateJogador().getDescricao();
+        return jogadorService.generateJogador().getDescricao();
     }
 }

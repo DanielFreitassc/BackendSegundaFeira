@@ -1,16 +1,16 @@
-package com.danielfreitassc.aula_1.exercicioB;
+package com.danielfeitassc.exercicio02.models;
 
 import lombok.Data;
 
 @Data
-public class Jogador {
+public class JogadorEntity {
     private String nome;
     private String sobrenome;
     private String posicao;
     private int idade;
     private String clube;
 
-    public Jogador(String nome, String sobrenome, String posicao, int idade, String clube) {
+    public JogadorEntity(String nome, String sobrenome, String posicao, int idade, String clube) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.posicao = posicao;
@@ -19,7 +19,7 @@ public class Jogador {
     }
 
     public String getDescricao() {
-        return nome + " " + sobrenome + " é um futebolista brasileiro de " + idade + " anos que atua como " + posicao + ". Atualmente defende o " + clube + ".";
+        return nome + " " + sobrenome + "é um futebolista brasileiro de " +idade+ "anos que atua como " + posicao + ". Atualmente defende o " + clube +".";
     }
     
 }

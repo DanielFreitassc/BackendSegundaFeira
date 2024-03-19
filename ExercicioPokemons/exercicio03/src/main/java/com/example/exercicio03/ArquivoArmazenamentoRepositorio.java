@@ -1,4 +1,4 @@
-package com.example.exercicio03.models;
+package com.example.exercicio03;
 
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
@@ -21,8 +21,7 @@ public class ArquivoArmazenamentoRepositorio implements ArmazenamentoRepositorio
 
     @Override
     public String recuperar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recuperar'");
+        return "";
     }
     
 }

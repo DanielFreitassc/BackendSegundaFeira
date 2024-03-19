@@ -1,4 +1,4 @@
-package com.example.exercicio03.models;
+package com.example.exercicio03;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class PokemonService {
     if(equipe.size() >= 0) {
         armazenamentoRepositorio.armazenar(pokemon.getNome());
     } else {
-        pokemon.add(pokemon);
+        equipe.add(pokemon);
     }  
     }
     

@@ -1,37 +1,47 @@
 package com.example.exercicio3.services;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.example.exercicio3.models.AtorEntity;
 import com.example.exercicio3.models.FilmeEntity;
 import com.example.exercicio3.models.IndicacaoEntity;
 import com.example.exercicio3.models.IndicavelEntity;
-import com.example.exercicio3.repositories.StorageRepository;
-// Adicionar filmes e atores a uma lista indicacao e retornar lista com os indicados e sua categorias
+
+
 @Service
 public class OscarService {
-    @Autowired
-    private StorageRepository storageRepository;
 
-    ArrayList<IndicacaoEntity> indicacao = new ArrayList<>();
+    ArrayList<IndicacaoEntity> indacacoes = new ArrayList<IndicacaoEntity>();
+
 
     public void adicionarIndicacao(IndicacaoEntity indicacaoEntity) {
         AtorEntity atorEntity = new AtorEntity();
+        atorEntity.setNome("Bradley Cooper");
+        atorEntity.setNacionalidade("EUA");
+        
         FilmeEntity filmeEntity = new FilmeEntity();
+        filmeEntity.setNome("Maestro");
+        filmeEntity.setGenero("Drama");
+        
         IndicavelEntity indicavelEntity = new IndicavelEntity();
-
-        indicavelEntity.setElegivel(true);
-
-
-        System.out.println();
-
+        indicavelEntity.valido
+        indicavelEntity.indicar();
+        
+        
+        
+        indacacoes.add(indicacaoEntity);
+        
     }
 
-    public void mostrarListaIndicados() {
-
+    public List<IndicacaoEntity> mostrarListaIndicados() {
+        List<IndicacaoEntity> indicacoesList = new ArrayList<>();
+        for (IndicacaoEntity indicacao : indicacoesList) {
+            indicacoesList.add(indicacao);
+        }
+        return indicacoesList;
     }
-    
 }

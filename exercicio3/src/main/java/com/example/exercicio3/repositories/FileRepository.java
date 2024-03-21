@@ -21,7 +21,7 @@ public class FileRepository implements StorageRepository{
     }
 
     @Override
-    public String bucar() {
+    public String buscar() {
         return "lista";
     }
     

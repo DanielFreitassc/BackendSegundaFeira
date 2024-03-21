@@ -14,6 +14,7 @@ public class AtorEntity {
     
     public String getAtor() {
         return "Ator indicado ao oscar:"+ nome +" de, nacionalidade: " + nacionalidade;
+        
     }
 
 }

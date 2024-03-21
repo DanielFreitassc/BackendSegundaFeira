@@ -11,4 +11,5 @@ import lombok.Data;
 public class IndicacaoEntity {
     private IndicavelEntity Indicavel;
     private String categoria;
+
 }

@@ -13,7 +13,7 @@ public class FilmeEntity {
     private String genero;
 
 
-    public String getAtor() {
+    public String getFilme() {
         return "O filme:"+ nome +" de, genero: " + genero;
     }
 }

@@ -1,26 +1,22 @@
 package com.example.exercicio3;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.exercicio3.models.IndicavelEntity;
 import com.example.exercicio3.services.OscarService;
 
 @SpringBootApplication
 public class Exercicio3Application {
 	@Autowired
-	OscarService oscarService;
-
+	private static OscarService oscarService;
 
 	public static void main(String[] args) {
-		
-		IndicavelEntity indicavelEntity = new IndicavelEntity();
+	 SpringApplication.run(Exercicio3Application.class, args);
 
-		OscarService oscarService = new OscarService();
-		oscarService.adicionarIndicacao();
-		
-
+	 oscarService.mostrarListaIndicados();
+	 
 	}
+
 
 }

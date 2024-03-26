@@ -26,33 +26,17 @@ public class OscarService {
             indicacao.setElegivel(elegivel);
             indicacao.incrementarIndicacoes();
             indicacoes.add(indicacao);
-            String textoIndicacao = "Indicação: " + indicavel.toString() + ", Categoria: " + categoria + ", Elegível: " + elegivel + ", Número de Indicações: " + indicacao.getNumeroDeIndicacoes();
+            String textoIndicacao = "Indicação: " + indicavel.toString() + ", Categoria: " + categoria + ", Elegível: Sim "  + ", Número de Indicações: " + indicacao.getNumeroDeIndicacoes();
             armazenamentoRepositorio.armazenar(textoIndicacao);
         } else {
             System.out.println("Erro: O filme ou ator não pode ser indicado pois não é elegível.");
         }
     }
     
-
-    public List<Indicacao> getIndicacoes() {
-        return indicacoes;
-    }
-
     public void mostrarListaIndicados() {
         for (Indicacao indicacao : indicacoes) {
-            System.out.println("Indicação: " + indicacao.getIndicavel().toString() + ", Categoria: " + indicacao.getCategoria() + ", Elegível: " + indicacao.isElegivel() + ", Número de Indicações: " + indicacao.getNumeroDeIndicacoes());
+            System.out.println("Indicação: " + indicacao.getIndicavel().toString() + ", Categoria: " + indicacao.getCategoria() + ", Elegível: " + "Sim" + ", Número de Indicações: " + indicacao.getNumeroDeIndicacoes());
         }
     }
     
-
-    public void salvarIndicacoesEmArquivo(String filePath) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
-            for (Indicacao indicacao : indicacoes) {
-                writer.write("Indicação: " + indicacao.getIndicavel().toString() + ", Categoria: " + indicacao.getCategoria() + ", Elegível: " + indicacao.isElegivel() + ", Número de Indicações: " + indicacao.getNumeroDeIndicacoes());
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

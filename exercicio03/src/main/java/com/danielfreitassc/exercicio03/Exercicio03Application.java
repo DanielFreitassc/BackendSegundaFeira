@@ -28,17 +28,16 @@ public class Exercicio03Application {
 		Filme harryPotter = new Filme("HarryPotter", "Fantasia");
 		Filme aBelaeaFera = new Filme("A Bela e a Fera", "Fantasia");
 
-        Indicacao indicacao1 = new Indicacao(emmaWatson, "Melhor cantora");
+        Indicacao indicacao1 = new Indicacao(emmaWatson, "Melhor Atora");
         Indicacao indicacao2 = new Indicacao(tomHanks, "Melhor Ator");
         Indicacao indicacao3 = new Indicacao(harryPotter, "Melhor filme");
         Indicacao indicacao4 = new Indicacao(aBelaeaFera, "Melhor trilha sonora");
-        Indicacao indicacao5 = new Indicacao(harryPotter, "Melhor trilha sonora");
+
 		
-        oscarService.adicionarIndicacao(indicacao1, indicacao1.getCategoria(), false);
+        oscarService.adicionarIndicacao(indicacao1, indicacao1.getCategoria(), true);
 		oscarService.adicionarIndicacao(indicacao2, indicacao2.getCategoria(),false );
         oscarService.adicionarIndicacao(indicacao3, indicacao3.getCategoria(), true);
-        oscarService.adicionarIndicacao(indicacao4, indicacao4.getCategoria(), false);
-        oscarService.adicionarIndicacao(indicacao5, indicacao5.getCategoria(), true);
+        oscarService.adicionarIndicacao(indicacao4, indicacao4.getCategoria(), true);
         oscarService.mostrarListaIndicados();
     }
 }

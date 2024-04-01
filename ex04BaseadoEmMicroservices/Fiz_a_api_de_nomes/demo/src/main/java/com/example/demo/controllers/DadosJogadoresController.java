@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("jogador")
-public class NomeController {
+public class DadosJogadoresController {
     private static final String BASE_PATH = "src/main/resources/static/";
 
     @GetMapping("/{fileName}")

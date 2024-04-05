@@ -22,10 +22,12 @@ http://localhost:8080/usuario/1
 }
 ```
 # Buscar a messagem personalizada
+GET
 ```
 http://localhost:8080/tempo
 ```
 # Busca o aluno e o tema da api
+GET
 ```
 http://localhost:8080/ajuda
 ```

@@ -18,7 +18,6 @@ public class ResponseCliente {
         this.saldo = saldo;
     }
 
-    // Getters and setters
     public String getNome() {
         return nome;
     }

@@ -2,7 +2,9 @@ package com.danielfreitas.exercicio07.dtos;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.Data;
 
+@Data
 public class ResponseCliente {
     @NotBlank(message = "Nome não pode estar em branco")
     private String nome;
@@ -16,7 +18,7 @@ public class ResponseCliente {
     public ResponseCliente(String nome, Double saldo) {
         this.nome = nome;
         this.saldo = saldo;
-    }
+    }  
 
     public String getNome() {
         return nome;

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.danielfreitas.exercicio07.dtos.ClienteRecordDTO;
 import com.danielfreitas.exercicio07.dtos.ResponseCliente;
-import com.danielfreitas.exercicio07.models.ClienteEntity;
 import com.danielfreitas.exercicio07.services.ClienteService;
 
 import jakarta.validation.Valid;
@@ -27,7 +26,7 @@ public class ClienteController {
     private ClienteService clienteService;    
   
     @PostMapping
-    public ResponseEntity<ClienteEntity> saveCliente(@RequestBody @Valid ClienteRecordDTO clienteRecordDTO) {
+    public ResponseEntity<Object> saveCliente(@RequestBody @Valid ClienteRecordDTO clienteRecordDTO) {
         return clienteService.saveCliente(clienteRecordDTO);
     }
 

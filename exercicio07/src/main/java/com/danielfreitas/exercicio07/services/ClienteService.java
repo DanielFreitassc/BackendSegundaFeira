@@ -1,6 +1,8 @@
 package com.danielfreitas.exercicio07.services;
 
 import java.util.Optional;
+
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,9 +19,9 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public ResponseEntity<ClienteEntity> saveCliente(ClienteRecordDTO clienteRecordDTO) {
-        ClienteEntity clienteEntity = new ClienteEntity();
-        BeanUtils.copyProperties(clienteRecordDTO, clienteEntity);
+    public ResponseEntity<Object> saveCliente(ClienteRecordDTO clienteRecordDTO) {
+        String hashed = BCrypt.hashpw(clienteRecordDTO.senha(), BCrypt.gensalt());
+        ClienteEntity clienteEntity = new ClienteEntity(clienteRecordDTO.nome(), clienteRecordDTO.saldo(), hashed);
         return ResponseEntity.status(HttpStatus.CREATED).body(clienteRepository.save(clienteEntity));
     }
 

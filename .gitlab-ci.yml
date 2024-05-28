@@ -1,7 +1,11 @@
+variables:
+  STUDENT_ID: "202311401" 
+  STUDENT_NAME: "Daniel Freitas" 
 stages:
-  - review
-review:
-  stage: review
-  image: maven:3.8.4-openjdk-11
+  - validate
+
+validate:
+  stage: validate
+  image: registry.gitlab.com/professor-rvenson/backend-n1-validate
   script:
-    -validate
+    - validate
